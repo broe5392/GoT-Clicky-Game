@@ -3,7 +3,7 @@ import "./MemoryCards.css";
 
 const MemoryCards = props => (
     
-        <img className="images" alt={props.name} src={props.img} />
+        <img className="images rounded border" id={props.id} onClick={props.handleBtnClick} alt={props.name} src={props.img} />
     
 );
 

@@ -2,6 +2,12 @@
     position: fixed;
     width: 100%;
     background: black;
+    color: azure;
+}
+
+.navbar ul {
+    width: 100%;
+    padding-left: 0;
 }
 
 .navbar li {
