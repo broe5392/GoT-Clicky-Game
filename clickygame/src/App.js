@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import Shuffle from "react-shuffle";
+import Shuffle from "shuffle-array";
 import Header from "./components/Header";
 import MemoryCards from "./components/MemoryCards";
 import Navbar from "./components/Navbar";
@@ -20,6 +22,7 @@ class App extends Component {
     this.setState({ message: "Click an image to begin!" })
   }
 
+
   handleBtnClick = event => {
     // setting the ID equal to a const
     const click = event.target.attributes.getNamedItem("id").value;
@@ -31,8 +34,11 @@ class App extends Component {
         score: 0,
         clicked: []
     });
+    //setting shuffle array for if and else
+      this.state.Charecters.sort(function(a,b) {return 0.5 - Math.random()});
     }else{
       // shuffle
+      this.state.Charecters.sort(function(a,b) {return 0.5 - Math.random()});
       // adding the image ID to the clicked array
       this.state.clicked.push(click);
       // setting state to update message score and highscore for a correct pick
